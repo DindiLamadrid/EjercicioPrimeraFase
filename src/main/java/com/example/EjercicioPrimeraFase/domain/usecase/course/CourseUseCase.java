@@ -3,11 +3,11 @@ package com.example.EjercicioPrimeraFase.domain.usecase.course;
 import com.example.EjercicioPrimeraFase.domain.model.course.dto.CourseDTO;
 import com.example.EjercicioPrimeraFase.domain.model.gateway.ICourseRepository;
 
-public class CourseRepository {
+public class CourseUseCase {
 
     private final ICourseRepository repository;
 
-    public CourseRepository(ICourseRepository repository) {
+    public CourseUseCase(ICourseRepository repository) {
         this.repository = repository;
     }
 

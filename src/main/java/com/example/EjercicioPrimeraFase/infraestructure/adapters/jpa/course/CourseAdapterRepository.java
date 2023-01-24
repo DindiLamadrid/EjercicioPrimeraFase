@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @AllArgsConstructor
-public class CourseRepositoryAdapter implements ICourseRepository {
+public class CourseAdapterRepository implements ICourseRepository {
 
         private final ICourseAdapterRepository repository;
 

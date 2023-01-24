@@ -1,7 +1,7 @@
 package com.example.EjercicioPrimeraFase.infraestructure.entrypoint.course;
 
 import com.example.EjercicioPrimeraFase.domain.model.course.dto.CourseDTO;
-import com.example.EjercicioPrimeraFase.domain.usecase.course.CourseRepository;
+import com.example.EjercicioPrimeraFase.domain.usecase.course.CourseUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class CourseEntryPoint {
 
-    private final CourseRepository courseRepository;
+    private final CourseUseCase studentUserCase;
 
     @PostMapping
     public ResponseEntity<?> saveCourse(CourseDTO courseDTO){
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED)
-                .body(courseRepository.saveCourse(courseDTO));
+                .body(studentUserCase.saveCourse(courseDTO));
     }
 }
